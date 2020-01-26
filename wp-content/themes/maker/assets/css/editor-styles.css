@@ -1,0 +1,136 @@
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2016 Schwartzco Inc.
+*/
+@font-face {
+  font-family: "Canela Text Web";
+  src: url("../fonts/canelatext-thin-web.woff2") format("woff2"), url("../fonts/canelatext-thin-web.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap; }
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2019 Schwartzco Inc.
+License: 1911-QPJQYK
+*/
+@font-face {
+  font-family: "Canela Condensed Web";
+  src: url("../fonts/canelacondensed-thinitalic-web.woff2") format("woff2"), url("../fonts/canelacondensed-thinitalic-web.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap; }
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2019 Schwartzco Inc.
+License: 1911-OTRAGG
+*/
+@font-face {
+  font-family: "Canela Text Web";
+  src: url("../fonts/canelatext-thinitalic-web.woff2") format("woff2"), url("../fonts/canelatext-thinitalic-web.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Canela Condensed Web";
+  src: url("../fonts/canelacondensed-regular-web.woff2") format("woff2"), url("../fonts/canelacondensed-regular-web.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap; }
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2017 Schwartzco Inc.
+License: 1704-DQHNFM
+*/
+@font-face {
+  font-family: "Canela Web";
+  src: url("../fonts/canela-thin-web.eot");
+  src: url("../fonts/canela-thin-web.eot?#iefix") format("embedded-opentype"), url("../fonts/canela-thin-web.woff2") format("woff2"), url("../fonts/canela-thin-web.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Canela Web";
+  src: url("../fonts/canela-thinitalic-web.eot");
+  src: url("../fonts/canela-thinitalic-web.eot?#iefix") format("embedded-opentype"), url("../fonts/canela-thinitalic-web.woff2") format("woff2"), url("../fonts/canela-thinitalic-web.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap; }
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2017 Schwartzco Inc.
+License: 1704-MXUBAL
+*/
+@font-face {
+  font-family: "Neue Haas Grot Disp Wep";
+  src: url("../fonts/neuehaasgrotdisp-45-light.eot");
+  src: url("../fonts/neuehaasgrotdisp-45-light.eot?#iefix") format("embedded-opentype"), url("../fonts/neuehaasgrotdisp-45-light.woff2") format("woff2"), url("../fonts/neuehaasgrotdisp-45-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Neue Haas Grot Disp Wep";
+  src: url("../fonts/neuehaasgrotdisp-65-medium.eot");
+  src: url("../fonts/neuehaasgrotdisp-65-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/neuehaasgrotdisp-65-medium.woff2") format("woff2"), url("../fonts/neuehaasgrotdisp-65-medium.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap; }
+
+body {
+  font-family: "Canela Text Web", serif;
+  font-weight: 100;
+  line-height: 1.5; }
+
+.wp-block {
+  max-width: 22.69231rem; }
+  @media screen and (min-width: 46.15385em) {
+    .wp-block {
+      max-width: 50.76923rem; } }
+  @media screen and (min-width: 92.30769em) {
+    .wp-block {
+      max-width: 66.15385rem; } }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFzc2V0cy9jc3Mvc3JjL3V0aWxzL19mb250cy5zY3NzIiwiZWRpdG9yLXN0eWxlcy5jc3MiLCJhc3NldHMvY3NzL3NyYy91dGlscy9fdmFyaWFibGVzLnNjc3MiLCJhc3NldHMvY3NzL3NyYy9lZGl0b3Itc3R5bGVzLnNjc3MiLCJhc3NldHMvY3NzL3NyYy91dGlscy9fbWl4aW5zLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBb0JBOzs7Ozs7Ozs7Q0NYQztBRFJBO0VBQ0MsOEJBOEJnQjtFQXRCZix1SEFDaUQ7RUFFbEQsZ0JFSlE7RUZLUixrQkFxQks7RUFwQkwsb0JBQW9CO0VBQ3BCLGtCQUFrQixFQUFBOztBQXVCcEI7Ozs7Ozs7Ozs7Q0NYQztBRDNCQTtFQUNDLG1DQWtEcUI7RUExQ3BCLDZJQUNpRDtFQUVsRCxnQkVKUTtFRktSLGtCQXlDSztFQXhDTCxvQkFBb0I7RUFDcEIsa0JBQWtCLEVBQUE7O0FBMkNwQjs7Ozs7Ozs7OztDQ1pDO0FEOUNBO0VBQ0MsOEJBc0VnQjtFQTlEZixtSUFDaUQ7RUFFbEQsZ0JFSlE7RUZLUixrQkE2REs7RUE1REwsb0JBQW9CO0VBQ3BCLGtCQUFrQixFQUFBOztBQWZuQjtFQUNDLG1DQTZFcUI7RUFyRXBCLHVJQUNpRDtFQUVsRCxnQkVGVztFRkdYLGtCQW9FSztFQW5FTCxvQkFBb0I7RUFDcEIsa0JBQWtCLEVBQUE7O0FBc0VwQjs7Ozs7Ozs7OztDQ1pDO0FEekVBO0VBQ0MseUJBZ0c2QjtFQTlGNUIsd0NBQXFDO0VBQ3JDLHVMQUdpRDtFQUtsRCxnQkVKUTtFRktSLGtCQW9GK0Q7RUFuRi9ELG9CQUFvQjtFQUNwQixrQkFBa0IsRUFBQTs7QUFmbkI7RUFDQyx5QkFpRzZCO0VBL0Y1Qiw4Q0FBcUM7RUFDckMseU1BR2lEO0VBS2xELGdCRUpRO0VGS1Isa0JBcUZxRTtFQXBGckUsb0JBQW9CO0VBQ3BCLGtCQUFrQixFQUFBOztBQXFGcEI7Ozs7Ozs7Ozs7Q0NFQztBRHRHQTtFQUNDLHNDQWdId0I7RUE5R3ZCLGtEQUFxQztFQUNyQyxxTkFHaUQ7RUFLbEQsZ0JFSFM7RUZJVCxrQkF1R0s7RUF0R0wsb0JBQW9CO0VBQ3BCLGtCQUFrQixFQUFBOztBQWZuQjtFQUNDLHNDQXVId0I7RUFySHZCLG1EQUFxQztFQUNyQyx3TkFHaUQ7RUFLbEQsZ0JFRFU7RUZFVixrQkE4R0s7RUE3R0wsb0JBQW9CO0VBQ3BCLGtCQUFrQixFQUFBOztBR1ZwQjtFQUNDLHFDRERvQztFQ0VwQyxnQkRDUztFQ0FULGdCQUFnQixFQUFBOztBQUdqQjtFQUNDLHNCQ0Y4QyxFQUFBO0VBaUM3QztJRGhDRjtNQUdFLHNCQ0o2QyxFQUFBLEVEUzlDO0VDd0JDO0lEaENGO01BTUUsc0JDUDZDLEVBQUEsRURTOUMiLCJmaWxlIjoiZWRpdG9yLXN0eWxlcy5jc3MifQ== */

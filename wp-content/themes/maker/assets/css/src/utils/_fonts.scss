@@ -1,0 +1,127 @@
+@mixin font-face($family, $filename, $weight, $style, $eot) {
+	@font-face {
+		font-family: $family;
+		@if $eot {
+			src: url('../fonts/#{$filename}.eot');
+			src: url('../fonts/#{$filename}.eot?#iefix')
+					format('embedded-opentype'),
+				url('../fonts/#{$filename}.woff2') format('woff2'),
+				url('../fonts/#{$filename}.woff') format('woff');
+		} @else {
+			src: url('../fonts/#{$filename}.woff2') format('woff2'),
+				url('../fonts/#{$filename}.woff') format('woff');
+		}
+		font-weight: $weight;
+		font-style: $style;
+		font-stretch: normal;
+		font-display: swap;
+	}
+}
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2016 Schwartzco Inc.
+*/
+
+@include font-face(
+	'Canela Text Web',
+	'canelatext-thin-web',
+	$thin,
+	normal,
+	false
+);
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2019 Schwartzco Inc.
+License: 1911-QPJQYK
+*/
+
+@include font-face(
+	'Canela Condensed Web',
+	'canelacondensed-thinitalic-web',
+	$thin,
+	italic,
+	false
+);
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2019 Schwartzco Inc.
+License: 1911-OTRAGG
+*/
+
+@include font-face(
+	'Canela Text Web',
+	'canelatext-thinitalic-web',
+	$thin,
+	italic,
+	false
+);
+@include font-face(
+	'Canela Condensed Web',
+	'canelacondensed-regular-web',
+	$regular,
+	normal,
+	false
+);
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2017 Schwartzco Inc.
+License: 1704-DQHNFM
+*/
+
+@include font-face('Canela Web', 'canela-thin-web', $thin, normal, true);
+@include font-face('Canela Web', 'canela-thinitalic-web', $thin, italic, true);
+
+/*
+This font software is the property of Commercial Type.
+
+You may not modify the font software, use it on another website, or install it on a computer.
+
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+Copyright (C) 2017 Schwartzco Inc.
+License: 1704-MXUBAL
+*/
+
+@include font-face(
+	'Neue Haas Grot Disp Wep',
+	'neuehaasgrotdisp-45-light',
+	$light,
+	normal,
+	true
+);
+@include font-face(
+	'Neue Haas Grot Disp Wep',
+	'neuehaasgrotdisp-65-medium',
+	$medium,
+	normal,
+	true
+);

@@ -1,0 +1,53 @@
+@mixin vh($n) {
+	height: $n * 1vh;
+	height: calc(var(--vh, 1vh) * #{$n});
+}
+
+@mixin vw($n) {
+	width: $n * 1vw;
+	width: calc(var(--vw, 1vw) * #{$n});
+}
+
+@function rem($px) {
+	@return (($px * 1px) / $base-font-size) * 1rem;
+}
+
+@function em($px, $context: $base-font-size) {
+	@return (($px * 1px) / $context) * 1em;
+}
+
+@function side($device) {
+	@return map-get($device, 'margin');
+}
+
+@function col($device) {
+	@return map-get($device, 'columns');
+}
+
+@function gap($device) {
+	@return map-get($device, 'gutter');
+}
+
+@function max($device) {
+	@return map-get($device, 'max-width');
+}
+
+@function break($device) {
+	@return map-get($device, 'breakpoint');
+}
+
+@mixin breakpoint($device) {
+	@if $device == $mobile {
+		@media screen and (max-width: #{em(break($device))}) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width: #{em(break($device))}) {
+			@content;
+		}
+	}
+}
+
+// < 600px
+// < 782px
+// < 960px

@@ -1,0 +1,82 @@
+.mkr-case {
+	display: block;
+
+	&__thumbnail {
+		@include vh(100);
+		left: 50%;
+		margin: 0 0 rem(100);
+		position: relative;
+		transform: translateX(-50%);
+		width: calc(100vw + 2px);
+
+		img,
+		svg {
+			display: block;
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		&::before,
+		&::after {
+			bottom: rem(50);
+			content: '';
+			display: none;
+			left: 50%;
+			opacity: 0;
+			position: absolute;
+			transition: opacity 0.3s linear;
+			@include breakpoint($tablet) {
+				display: block;
+			}
+		}
+
+		&::before {
+			border-bottom: 1px solid $white;
+			border-right: 1px solid $white;
+			padding: rem(13 / 2);
+			transform: translate(-50%, -10%) rotate(45deg);
+		}
+
+		&::after {
+			border-left: 1px solid $white;
+			height: rem(25);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&--show-arrow::before,
+		&--show-arrow::after {
+			opacity: 1;
+		}
+
+		.mkr--scrolled &::before,
+		.mkr--scrolled &::after {
+			opacity: 0;
+		}
+
+		~ * {
+			position: relative;
+			z-index: 12;
+		}
+	}
+
+	&.format-gallery {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			&:first-child {
+				margin-bottom: rem(30);
+				@include breakpoint($tablet) {
+					margin-bottom: rem(40);
+				}
+				@include breakpoint($desktop) {
+					margin-bottom: rem(45);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.mkr-next-entry {
+	background: $black;
+	color: $white;
+	height: rem(350);
+	left: 50%;
+	margin: rem(100) 0 rem(-105);
+	position: relative;
+	transform: translateX(-50%);
+	width: 100vw;
+	@include breakpoint($tablet) {
+		height: rem(500);
+		margin-bottom: rem(-150);
+	}
+
+	a {
+		border: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 100%;
+		margin: 0 rem(side($mobile) - gap($mobile) / 2);
+		@include breakpoint($tablet) {
+			margin: 0 rem(side($tablet) - gap($tablet) / 2);
+		}
+		@include breakpoint($desktop) {
+			margin: 0 rem(side($desktop) - gap($desktop) / 2);
+		}
+	}
+
+	&__thumbnail {
+		display: block;
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&__meta,
+	&__title {
+		margin: 0 rem(gap($mobile));
+		position: relative;
+		z-index: 2;
+		@include breakpoint($tablet) {
+			margin: 0 calc(100% / 12 + #{rem(gap($tablet) / 2)});
+		}
+	}
+
+	&__meta {
+		font: $medium rem(10) $sans;
+		letter-spacing: 0.15em;
+		line-height: (22 / 10);
+		text-transform: uppercase;
+	}
+
+	&__title {
+		font: $thin italic rem(36) $serif_condensed;
+		line-height: 1;
+	}
+}

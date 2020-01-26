@@ -1,0 +1,143 @@
+.mkr-nav {
+	&__toggle {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		display: block;
+		font: 0 / 0 serif;
+		left: 0;
+		margin: 0;
+		outline: none;
+		padding: rem(side($mobile) / 2);
+		position: fixed;
+		top: 0;
+		z-index: 11;
+		@include breakpoint($tablet) {
+			padding: rem(side($tablet) / 2);
+		}
+		@include breakpoint($desktop) {
+			display: none;
+			left: auto;
+			padding: rem(side($desktop) / 4);
+			right: rem(35);
+			top: rem(35);
+		}
+
+		&::before,
+		&::after {
+			border-top: 1px solid $grey-light;
+			content: '';
+			display: block;
+			left: rem(floor(side($mobile) / 2) - 7);
+			position: absolute;
+			top: rem(floor(side($mobile) / 2));
+			transition: border-color 300ms ease-out;
+			width: rem(15);
+			@include breakpoint($tablet) {
+				left: rem(floor(side($tablet) / 2) - 7);
+				top: rem(floor(side($tablet) / 2));
+			}
+			@include breakpoint($desktop) {
+				left: rem(floor(side($desktop) / 4) - 17);
+				top: rem(floor(side($desktop) / 4));
+				width: rem(35);
+			}
+		}
+
+		&::after {
+			transform: rotate(90deg);
+		}
+
+		.mkr--show-menu & {
+			@include breakpoint($desktop) {
+				display: block;
+			}
+
+			&::before {
+				transform: rotate(135deg);
+			}
+
+			&::after {
+				transform: rotate(45deg);
+			}
+		}
+
+		.mkr--alt-menu:not(.mkr--show-menu) &::before,
+		.mkr--alt-menu:not(.mkr--show-menu) &::after {
+			border-top-color: $white;
+		}
+	}
+
+	&__menu {
+		background: $black;
+		bottom: 0;
+		box-sizing: border-box;
+		color: $white;
+		display: none;
+		left: 0;
+		padding: rem(90) rem(side($mobile));
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 10;
+		@include breakpoint($tablet) {
+			padding: rem(200) rem(side($tablet));
+		}
+		@include breakpoint($desktop) {
+			background: transparent;
+			bottom: auto;
+			color: $grey-light;
+			display: block;
+			padding: rem(50) rem(32);
+			right: auto;
+
+			a:hover {
+				color: $grey;
+			}
+
+			.mkr--alt-menu &,
+			.mkr--alt-menu-n-logo:not(.mkr--show-menu):not(.mkr--scrolled) & {
+				color: $white;
+			}
+		}
+
+		.mkr--show-menu & {
+			display: block;
+			@include breakpoint($desktop) {
+				background: rgba($black, 0.85);
+				bottom: 0;
+				right: 0;
+			}
+		}
+
+		.menu {
+			font: $medium rem(9) $sans;
+			letter-spacing: 0.125em;
+			line-height: (22 / 9);
+			list-style: none;
+			margin: 0 auto;
+			padding: 0;
+			text-transform: uppercase;
+
+			a {
+				border-color: transparent;
+
+				&:hover {
+					border-color: transparent;
+					color: $grey-light;
+					@include breakpoint($desktop) {
+						border-color: transparent;
+						color: $grey;
+
+						.mkr--alt-menu &,
+						.mkr--alt-menu-n-logo:not(.mkr--show-menu):not(.mkr--scrolled)
+							& {
+							border-color: transparent;
+							color: $grey-light;
+						}
+					}
+				}
+			}
+		}
+	}
+}

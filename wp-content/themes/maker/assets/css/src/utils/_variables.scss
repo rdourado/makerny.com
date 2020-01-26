@@ -1,0 +1,64 @@
+// Typography
+
+$base-font-size: 16px !default;
+
+$sans: 'Neue Haas Grot Disp Wep', sans-serif;
+$serif: 'Canela Web', serif;
+$serif_text: 'Canela Text Web', serif;
+$serif_condensed: 'Canela Condensed Web', serif;
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 600;
+
+// Colors
+
+$black: #010101;
+$white: #fff;
+$ice: #f9f8f6;
+$grey-lighter: #cbcbca;
+$grey-light: #b3b3b3;
+$grey: #434343;
+
+// Grid
+
+$mobile: (
+	'columns': 4,
+	'gutter': 10,
+	'margin': 50,
+	'max-width': 275,
+	'breakpoint': 600 - 1,
+);
+
+$tablet: (
+	'columns': 12,
+	'gutter': 16,
+	'margin': 80,
+	'max-width': 608,
+	'breakpoint': 600,
+);
+
+$desktop: (
+	'columns': 12,
+	'gutter': 16,
+	'margin': 150,
+	'max-width': 980,
+	'breakpoint': 1200,
+);
+
+$wxga: (
+	'columns': 12,
+	'gutter': 16,
+	'margin': 150,
+	'max-width': 1066,
+	'breakpoint': 1360,
+);
+
+$wuxga: (
+	'columns': 12,
+	'gutter': 16,
+	'margin': 150,
+	'max-width': 1620,
+	'breakpoint': 1860,
+);

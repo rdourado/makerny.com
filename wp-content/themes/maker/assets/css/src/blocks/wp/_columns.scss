@@ -1,0 +1,15 @@
+.wp-block-columns {
+	display: block;
+	margin: 0 rem(gap($mobile) / 2);
+	@include breakpoint($tablet) {
+		display: grid;
+		gap: rem(gap($tablet));
+		grid-template-columns: repeat(12, 1fr);
+		margin: 0 rem(gap($tablet) / 2) rem(45);
+	}
+	@include breakpoint($desktop) {
+		gap: rem(gap($desktop));
+		grid-template-columns: repeat(10, 1fr);
+		margin: 0 calc(100% / 12 + #{rem(gap($desktop) / 2)}) rem(45);
+	}
+}

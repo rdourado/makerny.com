@@ -1,0 +1,40 @@
+#grid {
+	bottom: 0;
+	column-gap: rem(gap($mobile));
+	display: none;
+	height: 100%;
+	grid-template-columns: repeat(col($mobile), 1fr);
+	left: 0;
+	margin: 0 auto;
+	// max-width: rem(max($mobile));
+	padding: 0 rem(side($mobile));
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 99;
+	@include breakpoint($tablet) {
+		column-gap: rem(gap($tablet));
+		grid-template-columns: repeat(col($tablet), 1fr);
+		// max-width: rem(max($tablet));
+		padding: 0 rem(side($tablet));
+	}
+	@include breakpoint($desktop) {
+		// max-width: rem(max($desktop));
+		padding: 0 rem(side($desktop));
+	}
+	@include breakpoint($wxga) {
+		// max-width: rem(max($wxga));
+	}
+	@include breakpoint($wuxga) {
+		// max-width: rem(max($wuxga));
+	}
+
+	&:target {
+		display: grid;
+	}
+
+	> div {
+		background: rgba(#0ff, 0.25);
+	}
+}

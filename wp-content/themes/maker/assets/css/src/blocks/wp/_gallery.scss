@@ -1,0 +1,446 @@
+.wp-block-gallery {
+	margin: rem(50) 0 rem(30);
+	max-width: none;
+	@include breakpoint($tablet) {
+		margin: rem(100) 0 rem(40);
+	}
+	@include breakpoint($desktop) {
+		margin: rem(200) 0 rem(50);
+	}
+	@include breakpoint($wxga) {
+		margin-top: rem(100);
+	}
+	@include breakpoint($wuxga) {
+		margin-top: rem(200);
+	}
+
+	img,
+	svg {
+		display: block;
+		height: auto;
+		object-fit: cover;
+		width: 100% !important;
+	}
+
+	figcaption {
+		box-sizing: border-box;
+		color: $grey-light;
+		display: block;
+		font: $light rem(9) $sans;
+		letter-spacing: 0.15em;
+		line-height: (22 / 9);
+		margin: rem(30) 0 0;
+		padding: 0 0 0 50%;
+		text-align: right;
+		width: 100%;
+		@include breakpoint($tablet) {
+			margin-top: rem(40);
+			padding-right: calc(100% / 12 + #{rem(gap($tablet) / 2)});
+		}
+		@include breakpoint($desktop) {
+			margin-top: rem(50);
+		}
+	}
+
+	.blocks-gallery-grid {
+		position: relative;
+		width: 100%;
+	}
+
+	.slick-arrow {
+		background: url(../images/arrow.svg) no-repeat center;
+		background-size: rem(26) rem(20);
+		border: none;
+		cursor: pointer;
+		display: none !important;
+		font: 0 / 0 serif;
+		margin: 0;
+		opacity: 0.3;
+		outline: none;
+		padding: 0;
+		@include breakpoint($tablet) {
+			bottom: 0;
+			display: block !important;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			width: rem(side($tablet));
+
+			.mkr--sticky-arrows & {
+				height: rem(40);
+				position: absolute;
+				top: auto;
+			}
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:disabled {
+			pointer-events: none;
+		}
+	}
+
+	.slick-prev {
+		@include breakpoint($tablet) {
+			left: rem(side($tablet));
+			transform: translateX(-100%);
+
+			.mkr--sticky-arrows & {
+				left: rem(side($tablet) * -1 + gap($tablet) / 2);
+				transform: none;
+			}
+		}
+		@include breakpoint($desktop) {
+			left: rem(side($desktop));
+		}
+	}
+
+	.slick-next {
+		@include breakpoint($tablet) {
+			right: rem(side($tablet));
+			transform: translateX(100%) rotate(180deg);
+
+			.mkr--sticky-arrows & {
+				right: rem(side($tablet) * -1 + gap($tablet) / 2);
+				transform: rotate(180deg);
+			}
+		}
+		@include breakpoint($desktop) {
+			right: rem(side($desktop));
+		}
+	}
+
+	.slick-list {
+		margin: 0 rem(side($mobile) / -2 + gap($mobile) / 2);
+		@include breakpoint($tablet) {
+			margin: 0 rem(gap($tablet) / 2);
+		}
+	}
+
+	&__prev,
+	&__next {
+		align-items: center;
+		background: rgba(#010101, 0.85);
+		bottom: 0;
+		display: flex;
+		left: 0;
+		opacity: 0;
+		overflow: hidden;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: opacity 300ms ease-out;
+
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+
+		> figure,
+		> img {
+			display: block;
+			margin: 0 rem(gap($mobile) / 2);
+			width: 27%;
+			@include breakpoint($tablet) {
+				margin: 0 rem(gap($tablet) / 2);
+			}
+			@include breakpoint($desktop) {
+				margin: 0 rem(gap($desktop) / 2);
+			}
+		}
+
+		figcaption {
+			margin: 1em 0 0;
+			padding: 0;
+		}
+	}
+
+	&__prev {
+		> figure,
+		> img {
+			margin-right: auto;
+		}
+
+		figcaption {
+			text-align: right;
+		}
+
+		.slick-prev:not(:disabled):hover ~ & {
+			opacity: 1;
+		}
+	}
+
+	&__next {
+		> figure,
+		> img {
+			margin-left: auto;
+		}
+
+		figcaption {
+			text-align: left;
+		}
+
+		.slick-next:not(:disabled):hover ~ & {
+			opacity: 1;
+		}
+	}
+
+	.blocks-gallery-item {
+		margin: 0;
+
+		figcaption {
+			display: none;
+		}
+	}
+
+	&.is-style-carousel-slick {
+		background: $ice;
+		bottom: 0;
+		display: block;
+		@include vh(100);
+		left: 0;
+		margin: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 9;
+
+		.blocks-gallery-grid,
+		.slick-list,
+		.slick-track {
+			height: 100%;
+			margin: 0;
+		}
+
+		.blocks-gallery-grid {
+			.blocks-gallery-item {
+				background: $ice;
+				bottom: 0;
+				display: block;
+				left: 0;
+				margin: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: auto;
+
+				figure {
+					display: inline;
+				}
+
+				img {
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+				}
+
+				figcaption {
+					background: transparent;
+					bottom: auto;
+					display: block;
+					font-size: rem(9);
+					margin: 0;
+					padding: 0;
+					position: absolute;
+					right: rem(25);
+					top: rem(22);
+					width: auto;
+					@include breakpoint($tablet) {
+						top: rem(38);
+						right: rem(40);
+					}
+					@include breakpoint($tablet) {
+						top: rem(50);
+						right: rem(52);
+					}
+				}
+
+				&--right {
+					figcaption {
+						color: $grey-light;
+						@include breakpoint($desktop) {
+							right: calc(50% + #{rem(36)});
+						}
+					}
+
+					img {
+						height: calc(100% - 22% * 2);
+						left: rem(50);
+						top: 22%;
+						width: calc(100% - #{rem(50)}) !important;
+						@include breakpoint($tablet) {
+							height: calc(100% - 16.5% * 2);
+							left: 37.5%;
+							top: 16.5%;
+							width: calc(100% - 37.5%) !important;
+						}
+						@include breakpoint($desktop) {
+							height: 100%;
+							left: 50%;
+							top: 0;
+							width: 50% !important;
+						}
+					}
+				}
+
+				&--center {
+					figcaption {
+						color: $grey-light;
+					}
+
+					img {
+						height: calc(100% - 24% * 2);
+						top: 24%;
+						@include breakpoint($tablet) {
+							left: rem(80);
+							top: 33%;
+							height: calc(100% - 33% * 2);
+							width: calc(100% - #{rem(80) * 2}) !important;
+						}
+						@include breakpoint($desktop) {
+							height: calc(100% - 24% * 2);
+							left: 50%;
+							transform: translateX(-50%);
+							top: 24%;
+							width: calc(
+								(100% - #{rem(142 * 2)}) / 12 * 10 - #{rem(16)}
+							) !important;
+						}
+					}
+				}
+
+				&--left {
+					figcaption {
+						color: $grey-light;
+					}
+
+					img {
+						height: calc(100% - 22% * 2);
+						top: 22%;
+						width: calc(100% - #{rem(50)}) !important;
+						@include breakpoint($tablet) {
+							height: calc(100% - 16.5% * 2);
+							top: 16.5%;
+							width: calc(100% - 37.5%) !important;
+						}
+						@include breakpoint($desktop) {
+							height: 100%;
+							top: 0;
+							width: 50% !important;
+						}
+					}
+				}
+
+				&--right-off {
+					img {
+						left: rem(50);
+						width: calc(100% - #{rem(50)}) !important;
+						@include breakpoint($tablet) {
+							left: rem(80);
+							width: calc(100% - #{rem(80)}) !important;
+						}
+						@include breakpoint($desktop) {
+							left: rem(150);
+							width: calc(100% - #{rem(150)}) !important;
+						}
+					}
+				}
+
+				&--bottom-off {
+					figcaption {
+						color: $grey-light;
+					}
+
+					img {
+						height: calc(100% - 24%);
+						top: 24%;
+						@include breakpoint($tablet) {
+							height: calc(100% - 29%);
+							top: 29%;
+						}
+						@include breakpoint($desktop) {
+							height: calc(100% - 25.5%);
+							top: 25.5%;
+						}
+					}
+				}
+
+				&--center-off {
+					figcaption {
+						color: $grey-light;
+					}
+
+					img {
+						height: calc(100% - 14%);
+						top: 14%;
+						@include breakpoint($tablet) {
+							left: rem(80);
+							width: calc(100% - #{rem(80) * 2}) !important;
+						}
+						@include breakpoint($desktop) {
+							height: calc(100% - #{rem(150)});
+							left: 50%;
+							transform: translateX(-50%);
+							top: rem(150);
+							width: calc(
+								(100% - #{rem(142 * 2)}) - #{rem(16)}
+							) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.mkr-entry > &,
+	.mkr-case > & {
+		> .blocks-gallery-grid:not(.slick-slider) {
+			display: grid;
+			gap: rem(gap($mobile));
+			grid-template-columns: repeat(2, 1fr);
+			@include breakpoint($tablet) {
+				gap: rem(gap($tablet));
+			}
+
+			.blocks-gallery-item {
+				width: auto;
+			}
+		}
+
+		&.columns-3 > .blocks-gallery-grid {
+			@include breakpoint($tablet) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		&.aligncenter {
+			margin: 0 rem(gap($mobile) / 2) rem(25);
+			@include breakpoint($tablet) {
+				margin: 0 rem(gap($tablet) / 2) rem(40);
+			}
+			@include breakpoint($desktop) {
+				margin: 0 rem(gap($desktop) / 2) rem(75);
+			}
+		}
+
+		&.alignwide {
+			margin: 0 rem(side($mobile) / -2 + gap($mobile) / 2) rem(25);
+			@include breakpoint($tablet) {
+				margin: 0 rem(side($tablet) / -2 + gap($tablet) / 2) rem(40);
+			}
+			@include breakpoint($desktop) {
+				margin: 0 rem(side($desktop) / -2 + gap($desktop) / 2) rem(75);
+			}
+		}
+	}
+
+	.single-format-gallery .mkr-case > &:first-child,
+	.tax-client .mkr-case > &:first-child {
+		margin-bottom: rem(-22);
+	}
+}

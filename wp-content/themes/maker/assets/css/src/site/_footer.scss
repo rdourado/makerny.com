@@ -1,0 +1,61 @@
+.mkr-footer {
+	background: $black;
+	border-top: 1px solid $grey;
+	color: $white;
+	font: $thin italic rem(17) $serif;
+	line-height: (25 / 17);
+	margin: rem(105) 0 0;
+	position: relative;
+	text-align: center;
+
+	&::before,
+	&::after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+
+	a {
+		border-color: transparent;
+
+		&:hover,
+		&:focus {
+			border-color: $white;
+		}
+	}
+
+	&__logo {
+		@extend .mkr-header__logo;
+		bottom: 100%;
+		position: absolute;
+		visibility: hidden;
+
+		.mkr--sticky-logo & {
+			visibility: visible;
+		}
+	}
+
+	& &__menu {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		margin: 0;
+		padding: rem(45) rem(side($mobile));
+
+		a {
+			border-color: transparent !important;
+
+			&:hover,
+			&:focus {
+				border-color: $white !important;
+			}
+		}
+	}
+
+	&__copy {
+		color: $grey-light;
+		font: $light rem(9) $sans;
+		letter-spacing: 0.15em;
+		margin: rem(45) auto rem(22);
+	}
+}

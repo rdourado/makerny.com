@@ -1,0 +1,100 @@
+.mkr-cases {
+	$root: #{&};
+
+	.mkr-nav & {
+		margin: rem(22) auto;
+		@include breakpoint($desktop) {
+			display: none;
+			margin: rem(100) rem(side($desktop) - 32 - gap($desktop) / 2);
+
+			.mkr--show-menu & {
+				display: block;
+			}
+		}
+	}
+
+	&__heading {
+		font: $medium rem(9) $sans;
+		letter-spacing: 0.125em;
+		line-height: (22 / 9);
+		margin: 0;
+		text-transform: uppercase;
+
+		.mkr-nav & {
+			@include breakpoint($desktop) {
+				margin-left: calc(100% / 12 + #{rem(gap($desktop) / 2)});
+				margin-right: calc(100% / 12 + #{rem(gap($desktop) / 2)});
+			}
+		}
+	}
+
+	&__entries {
+		font: $thin italic rem(14) $serif_text;
+		line-height: (22 / 14);
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@include breakpoint($desktop) {
+			align-items: flex-start;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.mkr-nav & {
+			@include breakpoint($desktop) {
+				margin-left: calc(100% / 12 + #{rem(gap($desktop) / 2)});
+				margin-right: calc(100% / 12 + #{rem(gap($desktop) / 2)});
+			}
+		}
+
+		strong {
+			font-size: (11em / 14);
+			font-style: normal;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+		}
+
+		a {
+			border-color: transparent;
+
+			// &:hover,
+			// &:focus {
+			// 	border-color: $white;
+			// }
+		}
+	}
+
+	&__thumbnail {
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: opacity 300ms ease-out;
+		z-index: -1;
+
+		img {
+			display: block;
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		&::before {
+			background: rgba($black, 0.5);
+			bottom: 0;
+			content: '';
+			display: block;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	&__entry:hover + &__thumbnail {
+		opacity: 1;
+	}
+}

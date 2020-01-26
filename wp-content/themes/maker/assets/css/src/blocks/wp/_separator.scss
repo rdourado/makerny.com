@@ -1,0 +1,39 @@
+.wp-block-separator {
+	border: none;
+	border-bottom: 1px solid $grey-lighter;
+	margin-bottom: rem(50);
+	margin-top: rem(50);
+
+	&.is-style-wide {
+		margin-left: rem(gap($mobile) / -2);
+		margin-right: rem(gap($mobile) / -2);
+		width: calc(100% + #{rem(gap($mobile))});
+		@include breakpoint($tablet) {
+			margin-left: rem(gap($tablet) / -2);
+			margin-right: rem(gap($tablet) / -2);
+			width: calc(100% + #{rem(gap($tablet))});
+		}
+		@include breakpoint($desktop) {
+			margin-left: calc(100% / 12 + #{rem(gap($desktop) / -2)});
+			margin-right: calc(100% / 12 + #{rem(gap($desktop) / -2)});
+			width: calc(100% / 12 * 10 + #{rem(gap($desktop))});
+		}
+
+		.mkr-case > & {
+			@include breakpoint($tablet) {
+				margin-left: auto;
+				margin-right: auto;
+				width: calc(100% / 12 * 10 + #{rem(gap($tablet))});
+			}
+		}
+	}
+
+	&.is-style-full {
+		left: 50%;
+		margin-left: 0;
+		margin-right: 0;
+		position: relative;
+		transform: translateX(-50%);
+		width: 100vw;
+	}
+}

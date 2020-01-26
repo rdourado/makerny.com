@@ -1,0 +1,47 @@
+.wp-block-quote {
+	font: $thin italic rem(36) $serif_condensed;
+	line-height: 1;
+	margin: 0;
+	text-align: center;
+
+	p {
+		font: inherit;
+		margin: 0;
+
+		&::before,
+		&::after {
+			background: url(../images/quote.svg) no-repeat center;
+			background-size: contain;
+			content: '';
+			display: block;
+			margin: rem(25) auto;
+			height: rem(gap($mobile) * 3 / 4);
+			width: rem(gap($mobile));
+			@include breakpoint($tablet) {
+				height: rem(gap($tablet) * 3 / 4);
+				width: rem(gap($tablet));
+			}
+		}
+
+		&::after {
+			transform: rotate(180deg);
+		}
+
+		@include breakpoint($tablet) {
+			margin-left: calc(100% / 12 * 2);
+			margin-right: calc(100% / 12 * 2);
+		}
+	}
+
+	cite {
+		display: block;
+		font: $medium rem(10) $sans;
+		letter-spacing: 0.15em;
+		line-height: (22 / 10);
+		margin: rem(25) auto;
+		text-transform: uppercase;
+		@include breakpoint($tablet) {
+			margin-top: rem(50);
+		}
+	}
+}

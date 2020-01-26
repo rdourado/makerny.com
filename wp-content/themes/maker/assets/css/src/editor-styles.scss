@@ -1,0 +1,21 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+$base-font-size: 13px;
+
+body {
+	font-family: $serif_text;
+	font-weight: $thin;
+	line-height: 1.5;
+}
+
+.wp-block {
+	max-width: rem(295);
+	@include breakpoint($tablet) {
+		max-width: rem(660);
+	}
+	@include breakpoint($desktop) {
+		max-width: rem(860);
+	}
+}

@@ -1,0 +1,57 @@
+.mkr-entry {
+	margin-top: rem(-50);
+	padding-top: rem(50);
+
+	&__header {
+		margin: 0 rem(gap($mobile) / 2) rem(20);
+		@include breakpoint($tablet) {
+			margin: 0 rem(gap($tablet) / 2) rem(20);
+			margin-right: calc(50% + #{rem(gap($tablet) / 2)});
+		}
+		@include breakpoint($desktop) {
+			margin-left: calc(100% / 12 + #{rem(gap($desktop) / 2)});
+		}
+	}
+
+	&__meta {
+		font: $medium rem(10) $sans;
+		letter-spacing: 0.15em;
+		line-height: (22 / 10);
+		text-transform: uppercase;
+
+		a {
+			border-color: transparent;
+
+			&:hover,
+			&:focus {
+				border-color: $black;
+			}
+		}
+	}
+
+	&__title {
+		font: $regular rem(32) $serif_condensed;
+		letter-spacing: normal;
+		line-height: 1;
+		margin: 0;
+	}
+
+	&__more {
+		border-color: transparent;
+		font-style: italic;
+
+		&:hover,
+		&:focus {
+			border-color: $black;
+		}
+
+		b,
+		strong {
+			font-size: (10em / 14);
+			font-style: normal;
+			font-weight: $regular;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+		}
+	}
+}

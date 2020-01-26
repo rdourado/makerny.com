@@ -1,0 +1,41 @@
+{
+	"name": "maker-blocks",
+	"version": "1.1.0",
+	"description": "Maker NY Gutenberg Blocks",
+	"author": {
+		"name": "Parafernália Interativa",
+		"url": "http://www.parafernalia.net.br/",
+		"email": "dev@parafernalia.net.br"
+	},
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"plugin"
+	],
+	"homepage": "https://makerny.com/",
+	"repository": {
+		"type": "git",
+		"url": "git@git.wpengine.com:production/parafernalia.git"
+	},
+	"bugs": {
+		"email": "dev@parafernalia.net.br"
+	},
+	"private": true,
+	"devDependencies": {
+		"@wordpress/scripts": "^6.0.0",
+		"classnames": "^2.2.6",
+		"lodash": "^4.17.15"
+	},
+	"publishConfig": {
+		"access": "restricted"
+	},
+	"scripts": {
+		"build": "wp-scripts build admin/js/src/maker-blocks-admin.js --output-path=admin/js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"prestart": "wp-scripts check-engines",
+		"start": "wp-scripts start admin/js/src/maker-blocks-admin.js --output-path=admin/js",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	}
+}

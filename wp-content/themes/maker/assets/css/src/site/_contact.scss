@@ -1,0 +1,18 @@
+.mkr-contact {
+	border-top: 1px solid $grey;
+	padding: rem(45) rem(side($mobile)) 0;
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	&__email,
+	&__phone,
+	&__social {
+		margin: (25em / 17) 0;
+	}
+}

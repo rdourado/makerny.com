@@ -1,0 +1,92 @@
+.wp-block-column {
+	grid-column: span 6;
+	margin: 0 0 rem(45);
+	@include breakpoint($tablet) {
+		margin: 0;
+	}
+	@include breakpoint($desktop) {
+		grid-column: span 5;
+	}
+	@include breakpoint($wuxga) {
+		grid-column: span 4;
+	}
+
+	&:empty {
+		display: none;
+	}
+
+	& + & {
+		grid-column: -6 / span 5;
+		margin: 0 0 rem(45);
+		@include breakpoint($tablet) {
+			margin: 0;
+		}
+		@include breakpoint($desktop) {
+			grid-column: -5 / span 4;
+		}
+		@include breakpoint($wuxga) {
+			grid-column: -6 / span 4;
+
+			.mkr-entry & {
+				grid-column: -6 / span 5;
+			}
+		}
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	.mkr-case & {
+		@include breakpoint($tablet) {
+			grid-column: 2 / span 6;
+		}
+		@include breakpoint($desktop) {
+			grid-column: span 5;
+		}
+		@include breakpoint($wxga) {
+			grid-column: span 5;
+		}
+		@include breakpoint($wuxga) {
+			grid-column: span 4;
+		}
+
+		+ .wp-block-column {
+			@include breakpoint($tablet) {
+				grid-column: -5 / span 4;
+			}
+			@include breakpoint($desktop) {
+				grid-column: -4 / span 3;
+			}
+			@include breakpoint($wxga) {
+				grid-column: -5 / span 4;
+			}
+			@include breakpoint($wuxga) {
+				grid-column: -6 / span 4;
+			}
+		}
+	}
+
+	.single-format-gallery .mkr-case &,
+	.tax-client .mkr-case & {
+		@include breakpoint($tablet) {
+			grid-column: 2 / span 6;
+		}
+		@include breakpoint($desktop) {
+			grid-column: span 5;
+		}
+
+		+ .wp-block-column {
+			@include breakpoint($tablet) {
+				grid-column: -6 / span 4;
+			}
+			@include breakpoint($desktop) {
+				grid-column: -6 / span 4;
+			}
+		}
+	}
+}

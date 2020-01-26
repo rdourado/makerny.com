@@ -1,0 +1,49 @@
+.mkr-press {
+	&__meta {
+		display: block;
+		font: $thin rem(11) $serif_text;
+		letter-spacing: 0.1em;
+		line-height: (22 / 11);
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		font: $thin italic rem(14) $serif_text;
+		letter-spacing: normal;
+		line-height: (22 / 14);
+		margin: 0;
+	}
+
+	&__entry {
+		margin: rem(10) rem(gap($mobile) / 2);
+		@include breakpoint($tablet) {
+			margin-left: rem(gap($tablet) / 2);
+			margin-right: rem(gap($tablet) / 2);
+		}
+
+		a {
+			border: none;
+
+			&:hover,
+			&:focus {
+				color: $grey;
+			}
+		}
+	}
+
+	.slick-track {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.mkr-main > & {
+		@include breakpoint($desktop) {
+			margin-left: calc(100% / 12);
+			margin-right: calc(100% / 12 * 2);
+		}
+		@include breakpoint($wuxga) {
+			margin-right: calc(100% / 12);
+		}
+	}
+}

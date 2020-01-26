@@ -1,0 +1,40 @@
+.mkr-main {
+	// margin: 0 auto auto;
+	// max-width: rem(max($mobile) + gap($mobile));
+	margin: 0 rem(side($mobile) - gap($mobile) / 2);
+	@include breakpoint($tablet) {
+		// max-width: rem(max($tablet) + gap($tablet));
+		margin: 0 rem(side($tablet) - gap($tablet) / 2);
+	}
+	@include breakpoint($desktop) {
+		// max-width: rem(max($desktop) + gap($desktop));
+		margin: 0 rem(side($desktop) - gap($desktop) / 2);
+	}
+	@include breakpoint($wxga) {
+		// max-width: rem(max($wxga) + gap($wxga));
+	}
+	@include breakpoint($wuxga) {
+		// max-width: rem(max($wuxga) + gap($wuxga));
+	}
+
+	&__heading {
+		font: $thin italic rem(32) $serif_condensed;
+		letter-spacing: normal;
+		line-height: 1;
+		margin: rem(100) rem(gap($mobile) / 2) 1em;
+		@include breakpoint($tablet) {
+			font-size: rem(36);
+			margin: rem(200) rem(gap($tablet) / 2) rem(36);
+		}
+		@include breakpoint($desktop) {
+			margin-left: calc(100% / 12 + #{rem(gap($desktop))});
+			margin-right: calc(100% / 12 + #{rem(gap($desktop))});
+		}
+		@include breakpoint($wxga) {
+			margin-top: rem(100);
+		}
+		@include breakpoint($wuxga) {
+			margin-top: rem(200);
+		}
+	}
+}

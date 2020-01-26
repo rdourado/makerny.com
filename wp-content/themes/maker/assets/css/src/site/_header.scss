@@ -1,0 +1,34 @@
+.mkr-header {
+	&__logo {
+		bottom: 0;
+		color: $grey-light;
+		font: 0 / 0 serif;
+		left: rem(side($mobile) / 2);
+		margin: 0 0 rem(30);
+		position: fixed;
+		transform: translateX(-50%);
+		transition: color 300ms ease-out;
+		z-index: 11;
+		@include breakpoint($tablet) {
+			left: rem(side($tablet) / 2);
+			margin-bottom: rem(50);
+		}
+
+		.mkr--sticky-logo & {
+			visibility: hidden;
+		}
+
+		.mkr--alt-logo:not(.mkr--show-menu) &,
+		.mkr--alt-menu-n-logo:not(.mkr--show-menu):not(.mkr--scrolled) & {
+			color: $white;
+		}
+
+		img,
+		svg {
+			display: block;
+			height: auto;
+			object-fit: contain;
+			width: rem(14.7);
+		}
+	}
+}

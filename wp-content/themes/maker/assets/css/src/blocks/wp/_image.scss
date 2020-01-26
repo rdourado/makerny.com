@@ -1,0 +1,71 @@
+.wp-block-image {
+	margin: 0;
+	max-width: none;
+
+	figure {
+		margin: 0;
+		width: 100%;
+	}
+
+	img,
+	svg {
+		display: block;
+		height: auto;
+		object-fit: cover;
+		width: 100%;
+	}
+
+	figcaption {
+		color: $grey;
+		font: $light rem(9) $sans;
+		letter-spacing: 0.15em;
+		line-height: (12 / 9);
+		margin: rem(16) 0 0;
+	}
+
+	.mkr-entry > &,
+	.mkr-case > & {
+		margin: 0 rem(gap($mobile) / 2) rem(25);
+		@include breakpoint($tablet) {
+			margin: 0 rem(gap($tablet) / 2) rem(40);
+		}
+		@include breakpoint($desktop) {
+			margin: 0 rem(gap($desktop) / 2) rem(75);
+		}
+
+		&.alignwide {
+			margin: 0 rem(side($mobile) / -2 + gap($mobile) / 2) rem(25);
+			@include breakpoint($tablet) {
+				margin: 0 rem(side($tablet) / -2 + gap($tablet) / 2) rem(40);
+			}
+			@include breakpoint($desktop) {
+				margin: 0 rem(side($desktop) / -2 + gap($desktop) / 2) rem(75);
+			}
+		}
+
+		&.alignfull {
+			left: 50%;
+			margin: 0 0 rem(25);
+			position: relative;
+			transform: translateX(-50%);
+			width: calc(100vw + 2px);
+			@include breakpoint($tablet) {
+				margin-bottom: rem(40);
+			}
+			@include breakpoint($desktop) {
+				margin-bottom: rem(75);
+			}
+		}
+	}
+
+	@include breakpoint($desktop) {
+		.mkr-entry > & {
+			margin: 0 calc(100% / 12 + #{rem(gap($desktop) / 2)}) rem(75);
+		}
+
+		.mkr-entry > .wp-block-separator + &,
+		.mkr-case > .wp-block-separator + & {
+			margin-top: rem(75);
+		}
+	}
+}
